@@ -1,0 +1,89 @@
+package Repetitivas;
+import java.util.Scanner;
+public class sueldos2 {
+    public static void main(String[] args) throws Exception {
+        Double bon;
+        Double sueld;
+        Double num;
+        Double desc;
+        Double fact;
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Por favor, introduzca su salario basico(Bs.): ");
+        num = scan.nextDouble();
+        while(num <= 0 ){
+            System.out.print("Por favor, introduzca su salario basico(Bs.): ");
+             num = scan.nextDouble();
+        }
+        System.out.println("¿Usted presentara facturas?");
+        System.out.println("1= SI ");
+        System.out.println("2= NO ");
+        int b = scan.nextInt();
+        while(b !=1 && b !=2){
+            System.out.println("¿Usted presentara facturas?");
+            System.out.println("1= SI ");
+            System.out.println("2= NO ");
+            b = scan.nextInt();
+        }
+        if(b== 1 ){
+            System.out.print("Por favor, introduzca el monto de sus facturas en total(Bs.): ");
+            fact = scan.nextDouble();
+            while(fact<=0){
+                System.out.print("Por favor, introduzca el monto de sus facturas en total(Bs.): ");
+                fact = scan.nextDouble();
+            }
+            System.out.println("¿Usted tiene bonos?");
+            System.out.println("1= SI ");
+            System.out.println("2= NO ");
+            int a = scan.nextInt();
+            while(a !=1 && a !=2){
+                System.out.println("¿Usted tiene bonos?");
+                System.out.println("1= SI ");
+                System.out.println("2= NO ");
+                a = scan.nextInt();
+            }
+            if(a == 1){
+                System.out.print("Por favor, introduzca el monto de su bono(Bs.): ");
+                bon = scan.nextDouble();
+                while(bon <= 0){
+                    System.out.print("Por favor, introduzca el monto de su bono(Bs.): ");
+                    bon = scan.nextDouble();
+             }
+             sueld = bon + num;
+             desc = (sueld * 0.13) - (fact*0.13);
+             System.out.print("El sueldo liquido que le corresponde es: "+ (sueld - desc) + " Bs.");
+            }
+            else{
+                desc = (num*0.13) - (fact*0.13);
+                System.out.print("El sueldo liquido que le corresponde es: "+ (num - desc) + " Bs.");
+        }
+        }
+        else{
+            System.out.println("¿Usted tiene bonos?");
+            System.out.println("1= SI ");
+            System.out.println("2= NO ");
+            int a = scan.nextInt();
+            while(a !=1 && a !=2){
+                System.out.println("¿Usted tiene bonos?");
+                System.out.println("1= SI ");
+                System.out.println("2= NO ");
+                a = scan.nextInt();
+            }
+            if(a == 1){
+                System.out.print("Por favor, introduzca el monto de su bono(Bs.): ");
+                bon = scan.nextDouble();
+                while(bon <= 0){
+                    System.out.print("Por favor, introduzca el monto de su bono(Bs.): ");
+                    bon = scan.nextDouble();
+                }
+                sueld = bon + num;
+                desc = sueld * 0.13;
+                System.out.print("El sueldo liquido que le corresponde es: "+ (sueld - desc) + " Bs.");
+            }
+            else{
+                desc = num*0.13;
+                System.out.print("El sueldo liquido que le corresponde es: "+ (num - desc) + " Bs.");
+            }
+        }
+        scan.close();
+        }
+            }
