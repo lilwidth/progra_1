@@ -1,0 +1,20 @@
+package Repetitivas;
+import java.util.Scanner;
+public class temperatura {
+    public static void main(String[] args) throws Exception {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Introduzca la temperatura en grados celcius: ");
+        int num = scan.nextInt();
+        if(num<= 17){
+            System.out.println("Esta frio, abrigate!! " );
+        }
+        else if(num> 17 && num <= 25){
+            System.out.println("El clima es templado, disfuta!!");
+        }
+        else if(num> 25){
+            System.out.println("Hace calor, usa gorra!!"); 
+        }
+        System.out.println("La temperatura en grados Fahrenheit es: "+ (num* 1.8+32));
+        scan.close();
+    }
+    }
