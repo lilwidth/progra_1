@@ -1,0 +1,10 @@
+package Repetitivas;
+public class multipos {
+    public static void main(String[] args) throws Exception {
+        for(int i= 9; i <=42; i++){
+            if(i%3 ==0 &&(i < 29 || i >39)){
+                System.out.println(i);
+            }
+        }
+    }
+}
