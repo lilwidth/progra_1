@@ -1,0 +1,15 @@
+function esBisiesto(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Ejemplo de uso:
+const año = 2024;
+if (esBisiesto(año)) {
+    console.log(`${año} es un año bisiesto.`);
+} else {
+    console.log(`${año} no es un año bisiesto.`);
+}
