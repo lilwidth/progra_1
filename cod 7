@@ -1,0 +1,14 @@
+package Repetitivas;
+import java.util.Scanner;
+public class suma { public static void main(String[] args) throws Exception {
+    Scanner scan = new Scanner(System.in);
+    int a=0;
+    while(a <= 100){
+        System.out.print("Por favor, introduzca el numero: ");
+        int num = scan.nextInt();
+        a += num;
+    }
+    System.out.print("La suma de los numeros ingresados es: "+ a);
+    scan.close();
+}
+}
