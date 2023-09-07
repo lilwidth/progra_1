@@ -1,0 +1,30 @@
+package Repetitivas;
+import java.util.Scanner;
+public class Ordenarnumero {
+    public static void main(String[] args) throws Exception {
+        Scanner scan = new Scanner(System.in);
+        Double c;
+        Double b;
+        Double a;
+        System.out.print("Por favor, introduzca un numero: ");
+         a = scan.nextDouble();
+        System.out.print("Por favor, introduzca un numero: ");
+         b = scan.nextDouble();
+        System.out.print("Por favor, introduzca un numero: ");
+         c = scan.nextDouble();
+        if(a>b && b> c){
+            System.out.println(a + " "+ b + " "+ c);}
+        else if (c<b && a<c){
+            System.out.println(b + " "+ c + " "+ a); }
+        else if(b>a && a>c){
+            System.out.println(b + " "+ a + " "+ c);}
+        else if(a>c && c>b){
+            System.out.println(a + " "+ c + " "+ b);}
+        else if(c>b && b>a){
+            System.out.println(c + " "+ b + " "+a);}
+        else if(c>a && a>b){
+            System.out.println(c + " "+ a + " "+ b);
+            scan.close();
+        }
+        }
+        }
