@@ -1,0 +1,25 @@
+package Repetitivas;
+import java.util.Scanner;
+public class numerosprimos {
+    public static void main(String[] args) throws Exception {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Por favor, introduce un numero positivo: ");
+        int num = scan.nextInt();
+        while(num<= 0){
+            System.out.print("Por favor, introduce un numero positivo: ");
+            num = scan.nextInt();
+        }
+        for(int i = 2; i<= num; i++){
+            int suma =0;
+            for(int k= 1; k<=i ; k++){
+                if(i %k ==0){
+                    suma+=1;
+                }   
+            }
+                if(suma == 2){
+                    System.out.print(i + " - "); 
+                }
+                scan.close();
+        }
+}
+}
